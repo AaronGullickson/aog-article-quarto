@@ -1,13 +1,7 @@
 $-- Implements the frontmatter, title page, and abstract.
 
-%%%% Abstract %%%%%
-%\renewcommand{\absnamepos}{empty}
-\renewcommand{\abstractnamefont}{\sffamily\small\bfseries}
-\renewcommand{\abstracttextfont}{\sffamily\small}
-\setlength{\absleftindent}{5pt}
-\setlength{\absrightindent}{\absleftindent}
+% for some reason this does not work in header
 \renewcommand{\abstractname}{Abstract.}
-
 
 $if(has-frontmatter)$
 \frontmatter

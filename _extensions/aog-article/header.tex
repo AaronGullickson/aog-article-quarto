@@ -2,7 +2,22 @@
 % CUSTOM PREAMBLE STUFF
 % -----------------------
 
+% -----------------
+% Title block stuff
+% -----------------
+
+% Abstract
 \usepackage[runin]{abstract}
+\renewcommand{\abstractnamefont}{\sffamily\small\bfseries}
+\renewcommand{\abstracttextfont}{\sffamily\small}
+\setlength{\absleftindent}{5pt}
+\setlength{\absrightindent}{\absleftindent}
+
+
+% Title
+\usepackage{titling}
+\pretitle{\par\begin{flushleft}\LARGE\sffamily\bfseries}
+\posttitle{\par\end{flushleft}\vskip 0.75em}
 
 
 % ---------------------------
