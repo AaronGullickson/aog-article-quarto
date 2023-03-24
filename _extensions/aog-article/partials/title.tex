@@ -9,15 +9,16 @@ $-- Customize is needed, like below for printing the authors. Otherwise remove t
 $if(title)$
 \title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
 $endif$
-$if(subtitle)$
-\usepackage{etoolbox}
-\makeatletter
-\providecommand{\subtitle}[1]{% add subtitle to \maketitle
-  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
-}
-\makeatother
-$endif$
-\subtitle{$subtitle$}
+% subtitles do not seem to work with article class?
+%$if(subtitle)$
+%\usepackage{etoolbox}
+%\makeatletter
+%\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+%  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+%}
+%\makeatother
+%$endif$
+%\subtitle{$subtitle$}
 
 \author{
 $for(by-author)$
