@@ -1,6 +1,8 @@
 ---
 title: "Demo of the AOG Article Template"
 shorttitle: "AOG Template"
+execute:
+  echo: false
 format:
   aog-article-pdf:
     linestretch: 1          # line spacing (1 for single, 2 for double)
@@ -172,7 +174,7 @@ Consectetur torquent justo cubilia luctus justo erat dignissim faucibus aliquet 
 
 ```{r}
 #| label: fig-template
-#| fig-cap: A Caption
+#| fig-cap: Lorem lobortis lectus pellentesque sapien vivamus eros felis cum. Mattis risus euismod vivamus vel mi nostra euismod euismod praesent aliquam? @tbl-desc-gt Sagittis posuere bibendum turpis arcu maecenas gravida leo sollicitudin primis. Ullamcorper lacinia laoreet tincidunt mollis torquent semper. Sem nascetur eleifend gravida nostra magnis arcu gravida facilisis sollicitudin? Cum curae placerat et auctor faucibus arcu ad mauris sollicitudin nunc!
 
 # Code for the figure below. You should change the label from "fig-template" to something relevant but it should start with "fig-". You can then reference this figure in the tex with @fig-whatever-you-called-it
 
