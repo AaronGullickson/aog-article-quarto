@@ -12,11 +12,18 @@ $if(has-frontmatter)$
 $endif$
 $if(title)$
 \maketitle
+%\noindent \rule{\linewidth}{.5pt}
 $if(abstract)$
-\noindent \rule{\linewidth}{.5pt}
 \begin{abstract}
 $abstract$
 \end{abstract}
-\noindent \rule{\linewidth}{.5pt}
+$if(keywords)$
+\begin{keywords}
+\def\sep{;\ }
+$for(keywords/allbutlast)$$keywords$\sep $endfor$
+$for(keywords/last)$$keywords$$endfor$
+\end{keywords}
 $endif$
+$endif$
+%\noindent \rule{\linewidth}{.5pt}
 $endif$
