@@ -13,12 +13,17 @@
 \setlength{\absleftindent}{5pt}
 \setlength{\absrightindent}{\absleftindent}
 
-
 % Title
 \usepackage{titling}
 \pretitle{\par\begin{flushleft}\LARGE\sffamily\bfseries}
 \posttitle{\par\end{flushleft}\vskip 0.75em}
 
+% Authors
+\usepackage{orcidlink}  % Create automatic ORCID icons/links
+%\renewcommand{\and}{\end{tabular} \hskip 3em \begin{tabular}[t]{@{\hspace{0em}}l@{}}}
+\preauthor{\begin{flushleft}
+           \lineskip 1.5em}
+\postauthor{\end{flushleft}}
 
 % ---------------------------
 % END CUSTOM PREAMBLE STUFF
