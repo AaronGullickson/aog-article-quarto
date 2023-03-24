@@ -3,6 +3,10 @@ $-- Implements the frontmatter, title page, and abstract.
 % for some reason this does not work in header
 \renewcommand{\abstractname}{Abstract.}
 
+$if(shorttitle)$
+\fancyhead[R]{$shorttitle$}
+$endif$
+
 $if(has-frontmatter)$
 \frontmatter
 $endif$

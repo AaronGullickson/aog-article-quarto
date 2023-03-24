@@ -1,5 +1,6 @@
 ---
 title: "Demo of the AOG Article Template"
+shorttitle: "AOG Template"
 format:
   aog-article-pdf:
     linestretch: 1          # line spacing (1 for single, 2 for double)
