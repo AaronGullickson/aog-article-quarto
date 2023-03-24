@@ -6,6 +6,7 @@ contributes:
   formats:
     pdf:
       toc: false
+      documentclass: scrartcl
       include-in-header: header.tex
       template-partials:
         - "partials/title.tex"

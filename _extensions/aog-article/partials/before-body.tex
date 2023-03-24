@@ -1,8 +1,13 @@
 $-- Implements the frontmatter, title page, and abstract.
-$--
-$-- %%%% TODO %%%%%
-$-- Customize is needed, otherwise remove this partials to use Quarto default one
-$-- %%%%%%%%%%%%%%%%
+
+%%%% Abstract %%%%%
+%\renewcommand{\absnamepos}{empty}
+\renewcommand{\abstractnamefont}{\sffamily\small\bfseries}
+\renewcommand{\abstracttextfont}{\sffamily\small}
+\setlength{\absleftindent}{5pt}
+\setlength{\absrightindent}{\absleftindent}
+\renewcommand{\abstractname}{Abstract.}
+
 
 $if(has-frontmatter)$
 \frontmatter
@@ -14,8 +19,10 @@ $else$
 \maketitle
 $endif$
 $if(abstract)$
+\noindent \rule{\linewidth}{.5pt}
 \begin{abstract}
 $abstract$
 \end{abstract}
+\noindent \rule{\linewidth}{.5pt}
 $endif$
 $endif$

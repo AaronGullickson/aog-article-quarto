@@ -10,7 +10,7 @@ format:
     colorlinks: true
     urlcolor: red
     fig-height: 3.5
-    keep-tex: false
+    keep-tex: true
 author:
   - name: John Doe
     orcid: 0000-0000-0000-0000
