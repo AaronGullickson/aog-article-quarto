@@ -17,8 +17,5 @@ contributes:
       include-in-header: header.tex
       template-partials:
         - "partials/title.tex"
-        - "partials/_authors.tex"
         - "partials/before-body.tex"
         - "partials/after-body.tex"
-        - "partials/before-bib.tex"
-

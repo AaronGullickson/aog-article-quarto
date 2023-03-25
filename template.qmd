@@ -13,7 +13,7 @@ format:
     urlcolor: red
     fig-height: 3.5
     fig-pos: "!t"
-    keep-tex: false
+    keep-tex: true
 author:
   - name: John Doe
     orcid: 0000-0000-0000-0000
@@ -31,9 +31,9 @@ abstract: |
   Ipsum nostra facilisis sapien nullam. Facilisi himenaeos pharetra ultricies scelerisque non fusce quisque aliquam netus tellus. Dictum tellus et sociis quisque ornare ad a natoque magna blandit. Tortor duis aptent cursus lacus inceptos tristique magnis dictumst. Taciti varius nascetur aliquet hac ornare vitae ultricies. Rhoncus primis purus morbi aliquet quam cubilia nullam malesuada ridiculus.
 keywords: [template, demo]
 thanks: Love to everyone.
-reference-section-title: Bibliography
+#reference-section-title: Bibliography
 bibliography: bibliography.bib
-csl: https://www.zotero.org/styles/journal-of-institutional-and-theoretical-economics
+csl: https://www.zotero.org/styles/american-journal-of-sociology
 ---
 
 ```{r}
@@ -79,7 +79,7 @@ Consectetur ullamcorper pharetra mattis leo himenaeos magnis non est non sagitti
 
 # Background
 
-Ipsum scelerisque id tellus luctus malesuada eget aptent nullam. Urna nec ad habitant sollicitudin dui porttitor tortor nisl augue [@seibold_computational_2021]. @mcfadden_conditional_1973 Class quam at metus mattis condimentum lacus gravida hendrerit. Tincidunt nullam laoreet facilisis dui bibendum faucibus urna.
+Ipsum scelerisque id tellus luctus malesuada eget aptent nullam. Urna nec ad habitant sollicitudin dui porttitor tortor nisl augue. @mcfadden_conditional_1973 Class quam at metus mattis condimentum lacus gravida hendrerit. Tincidunt nullam laoreet facilisis dui bibendum faucibus urna.
 
 Adipiscing habitasse integer sed fusce phasellus morbi libero mauris scelerisque fusce! Phasellus proin sem potenti torquent potenti ultrices orci bibendum morbi. Venenatis in vitae platea ligula orci dictumst pulvinar eleifend id ligula? Nisi vel mus tellus porttitor justo class cras orci est. Iaculis pretium tristique euismod facilisis vestibulum luctus lobortis quam tellus quis cum facilisis. Curabitur est parturient habitant proin elementum nascetur.
 
@@ -91,13 +91,20 @@ Amet rutrum a venenatis mi lectus venenatis nullam purus libero. Pulvinar dapibu
 
 ## Subsection 2
 
-### Subsubsection
 
 Adipiscing ad rhoncus nunc molestie sed feugiat? Imperdiet vivamus montes himenaeos sagittis urna nec felis vehicula nec pretium tortor? Molestie natoque sociis aenean mollis donec ornare cursus parturient tortor erat. Volutpat mi natoque sodales et hac ultricies eu pulvinar primis semper. Vitae est curabitur blandit montes tortor eros senectus porttitor maecenas.
+
+### Subsubsection
 
 Sit nunc lacus sapien augue ornare magnis massa odio velit maecenas mauris. Molestie justo proin venenatis hac congue facilisi suscipit arcu litora quam varius urna. Lacinia montes convallis ante sapien orci platea rutrum. Gravida dignissim mauris bibendum sollicitudin libero primis ultrices enim aliquam dictum! Vivamus sociis odio non vivamus ridiculus. Libero vitae cursus montes aptent est quisque sociosqu fringilla posuere lacinia sagittis. Quisque orci cum nulla sollicitudin duis nisi.
 
 Ipsum fringilla natoque sem praesent auctor tellus viverra convallis nullam quis risus. Mus natoque cras facilisi ac blandit maecenas fringilla natoque varius. Aptent mauris ac nunc dis habitant penatibus torquent dictumst platea class sociis. Sodales mattis augue libero vestibulum interdum condimentum arcu ridiculus massa lobortis. Orci pretium dictumst sociosqu fringilla praesent faucibus tempus ultrices natoque. Risus potenti class nascetur molestie augue a justo vehicula vivamus? Molestie natoque lectus rhoncus sociosqu ligula semper mattis urna mi quis dignissim?
+
+* Point A
+  * Subpoint 1
+* Point B
+* Point C
+
 
 # Data and Methods
 
@@ -193,3 +200,5 @@ texreg(list(model1, model2, model3),
 # Conclusions
 
 A paragraph to summarize the findings.
+
+# References

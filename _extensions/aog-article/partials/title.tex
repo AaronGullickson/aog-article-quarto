@@ -1,10 +1,5 @@
 $-- Provides configuration of document metadata for writing the title block.
 $-- Note that in addition to these templates and partials, Quarto will also make normalized authors and affiliations data available to the template,
-$-- making is easy to write custom title blocks against a standard schema.
-$--
-$-- %%%% TODO %%%%%
-$-- Customize is needed, like below for printing the authors. Otherwise remove this partials to use Quarto default one.
-
 
 $if(title)$
 \title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
@@ -22,7 +17,7 @@ $endif$
 
 \author{
 $for(by-author)$
-{\bfseries $it.name.literal$$if(it.orcid)$~\orcidlink{$it.orcid$}$endif$}%
+{\bfseries \normalsize $it.name.literal$$if(it.orcid)$~\orcidlink{$it.orcid$}$endif$}%
 $if(it.attributes.corresponding)$\thanks{Corresponding author.}$endif$ \\%
 $for(it.affiliations)$ \small $it.name$, $it.department$ \\$endfor$%
 {\footnotesize \url{$it.email$}} \\\vspace{10pt}
