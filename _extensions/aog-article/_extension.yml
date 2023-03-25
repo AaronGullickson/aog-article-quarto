@@ -14,7 +14,8 @@ contributes:
       documentclass: article
       toc: false
       papersize: letter
-      mainfont: Baskerville
+      # Replace fonts with any fonts available to the *system*
+      mainfont: Baskerville 
       sansfont: Futura
       fontsize: 12pt   
       geometry: margin=1in
