@@ -1,19 +1,19 @@
 ---
 title: "Demo of the AOG Article Template"
 shorttitle: "AOG Template"
-execute:
-  echo: false
 format:
   aog-article-pdf:
-    linestretch: 1          # line spacing (1 for single, 2 for double)
-    #mainfont: Times New Roman
+    # adjust fonts as desired from *system* fonts
+    mainfont: Baskerville
+    sansfont: Futura
     fontsize: 12pt          # font size (typically 10pt, 11pt, or 12pt)
     geometry: margin=1in    # controls the margin size
     papersize: letter
     colorlinks: true
     urlcolor: red
     fig-height: 3.5
-    keep-tex: true
+    fig-pos: "!t"
+    keep-tex: false
 author:
   - name: John Doe
     orcid: 0000-0000-0000-0000
@@ -24,18 +24,15 @@ author:
     affiliations:
       - id: uni
         name: University of State
-        department: Department of Cool
-      - id: uni-another
-        name: Neato Institute
-        department: Engineering
+        department: Department of Awesome
   - name: Jane Doe
     affiliations:
       - ref: uni
 abstract: |
   Ipsum nostra facilisis sapien nullam. Facilisi himenaeos pharetra ultricies scelerisque non fusce quisque aliquam netus tellus. Dictum tellus et sociis quisque ornare ad a natoque magna blandit. Tortor duis aptent cursus lacus inceptos tristique magnis dictumst. Taciti varius nascetur aliquet hac ornare vitae ultricies. Rhoncus primis purus morbi aliquet quam cubilia nullam malesuada ridiculus.
 keywords: [template, demo]
-thanks: Love to everyone
-reference-section-title: References
+thanks: Love to everyone.
+reference-section-title: Bibliography
 bibliography: bibliography.bib
 csl: https://www.zotero.org/styles/journal-of-institutional-and-theoretical-economics
 ---
@@ -116,19 +113,13 @@ palmerpenguins::penguins[c(1,200,205,307),] |>
   kable_paper()
 ```
 
-Lorem lobortis lectus pellentesque sapien vivamus eros felis cum. Mattis risus euismod vivamus vel mi nostra euismod euismod praesent aliquam? @tbl-desc-gt Sagittis posuere bibendum turpis arcu maecenas gravida leo sollicitudin primis. Ullamcorper lacinia laoreet tincidunt mollis torquent semper. Sem nascetur eleifend gravida nostra magnis arcu gravida facilisis sollicitudin? Cum curae placerat et auctor faucibus arcu ad mauris sollicitudin nunc! Posuere iaculis arcu dapibus dis ullamcorper pellentesque penatibus ultrices sed aenean ligula ullamcorper donec aliquam.
+Lorem lobortis lectus pellentesque sapien vivamus eros felis cum. Mattis risus euismod vivamus vel mi nostra euismod euismod praesent aliquam? @tbl-penguin-data Sagittis posuere bibendum turpis arcu maecenas gravida leo sollicitudin primis. Ullamcorper lacinia laoreet tincidunt mollis torquent semper. Sem nascetur eleifend gravida nostra magnis arcu gravida facilisis sollicitudin? Cum curae placerat et auctor faucibus arcu ad mauris sollicitudin nunc! Posuere iaculis arcu dapibus dis ullamcorper pellentesque penatibus ultrices sed aenean ligula ullamcorper donec aliquam.
 
 $$y_i=\beta_0+\beta_1x_i+\epsilon_i$$ {#eq-model}
 
-@eq-model lit nam mus class aliquam volutpat purus mauris ultricies aptent dignissim ($\beta_1=0$). Iaculis pulvinar at inceptos sociosqu blandit tristique ridiculus et sagittis mus justo. Suspendisse commodo nullam risus molestie pulvinar elementum malesuada consequat non velit augue. Vehicula id purus vulputate metus dis lectus magna purus nullam scelerisque interdum. Montes quis sem convallis vehicula orci habitasse metus nullam imperdiet faucibus dignissim! Na dignissim. See @fig-dist.
+@eq-model lit nam mus class aliquam volutpat purus mauris ultricies aptent dignissim ($\beta_1=0$). Iaculis pulvinar at inceptos sociosqu blandit tristique ridiculus et sagittis mus justo. Suspendisse commodo nullam risus molestie pulvinar elementum malesuada consequat non velit augue. Vehicula id purus vulputate metus dis lectus magna purus nullam scelerisque interdum. Montes quis sem convallis vehicula orci habitasse metus nullam imperdiet faucibus dignissim! Na dignissim. 
 
-```{r}
-#| label: fig-dist
-#| fig-cap: "Distribution of number of friend nominations received in Add Health data"
-
-```
-
-@fig-dist onsectetur magnis nisi porttitor massa vivamus iaculis vulputate suscipit vehicula ante nisl? Tempor porttitor netus aliquet inceptos etiam ornare etiam. Suscipit nascetur lacus magna tempus luctus eu. Nisl vitae himenaeos nullam lacinia aenean potenti sociis volutpat feugiat dignissim pellentesque!
+Onsectetur magnis nisi porttitor massa vivamus iaculis vulputate suscipit vehicula ante nisl? Tempor porttitor netus aliquet inceptos etiam ornare etiam. Suscipit nascetur lacus magna tempus luctus eu. Nisl vitae himenaeos nullam lacinia aenean potenti sociis volutpat feugiat dignissim pellentesque!
 
 # Results
 
@@ -136,15 +127,22 @@ Elit imperdiet aenean varius conubia sagittis orci ultrices. Ridiculus conubia a
 
 Lorem accumsan pharetra est cubilia placerat cubilia est fusce natoque laoreet rutrum porta pellentesque tempus! Inceptos arcu augue phasellus nunc ad aptent sem pulvinar maecenas. Tempor porttitor velit fermentum ornare convallis consequat proin mauris. Magna tortor non integer proin semper ad malesuada cras orci.
 
-Lorem accumsan pharetra est cubilia placerat cubilia est fusce natoque laoreet rutrum porta pellentesque tempus! Inceptos arcu augue phasellus nunc ad aptent sem pulvinar maecenas. Tempor porttitor velit fermentum ornare convallis consequat proin mauris. Magna tortor non integer proin semper ad malesuada cras orci. See @fig-scatter.
+Lorem accumsan pharetra est cubilia placerat cubilia est fusce natoque laoreet rutrum porta pellentesque tempus! Inceptos arcu augue phasellus nunc ad aptent sem pulvinar maecenas. Tempor porttitor velit fermentum ornare convallis consequat proin mauris. Magna tortor non integer proin semper ad malesuada cras orci. See @fig-template.
 
 ```{r}
-#| label: fig-scatter
-#| fig-cap: "Association between parental income and friend nominations by gender."
+#| label: fig-template
+#| fig-cap: Lorem lobortis lectus pellentesque sapien vivamus eros felis cum. Mattis risus euismod vivamus vel mi nostra euismod euismod praesent aliquam? @tbl-desc-gt Sagittis posuere bibendum turpis arcu maecenas gravida leo sollicitudin primis. Ullamcorper lacinia laoreet tincidunt mollis torquent semper. Sem nascetur eleifend gravida nostra magnis arcu gravida facilisis sollicitudin? Cum curae placerat et auctor faucibus arcu ad mauris sollicitudin nunc!
 
+# Code for the figure below. You should change the label from "fig-template" to something relevant but it should start with "fig-". You can then reference this figure in the tex with @fig-whatever-you-called-it
+
+# Each figure should go in a separate code chunk.
+# replace this code with a real figure
+ggplot(mtcars, aes(x=cyl, y=mpg))+
+  geom_point()+
+  theme_bw()
 ```
 
-@fig-scatter Consectetur consequat aptent habitasse dignissim magna feugiat consequat nisl praesent nunc cras tellus? Suscipit curae quis lacus hac rutrum primis sem sem magnis pharetra leo odio parturient libero odio. Mattis praesent maecenas penatibus dapibus hendrerit venenatis libero tellus nascetur. Dis maecenas cursus aptent purus.
+@fig-template Consectetur consequat aptent habitasse dignissim magna feugiat consequat nisl praesent nunc cras tellus? Suscipit curae quis lacus hac rutrum primis sem sem magnis pharetra leo odio parturient libero odio. Mattis praesent maecenas penatibus dapibus hendrerit venenatis libero tellus nascetur. Dis maecenas cursus aptent purus.
 
 Amet quis rutrum sem senectus porttitor torquent habitasse quis commodo ut. Varius at facilisi hendrerit suscipit lacinia enim dui pharetra. Condimentum cum molestie class rutrum porttitor ultricies cursus cum nec nam potenti donec vel! Iaculis dictum ad?
 
@@ -156,7 +154,7 @@ Lorem nullam nunc habitasse blandit eleifend est mauris. Lacus class mauris inte
 
 Elit varius diam quam magnis suscipit leo aptent congue? Proin placerat ultrices interdum mollis platea integer ac pharetra vulputate lacinia. Viverra nostra bibendum lacus lobortis varius condimentum eleifend faucibus odio justo montes sagittis? Eget imperdiet class tellus tincidunt dictumst sem ridiculus quam? Eget rutrum fames ridiculus eget pretium neque libero per! Eget dignissim magna nunc nulla dis orci interdum tellus tortor risus ut @tbl-model-results.
 
-@tbl-model-results results olor convallis vulputate dictum mollis ante placerat dui parturient porttitor conubia vitae. Eros nec dignissim tortor nascetur laoreet mi nascetur interdum lacus donec? Non potenti elementum massa hendrerit odio taciti euismod sagittis rhoncus sodales montes mattis? Sociosqu luctus neque euismod elementum accumsan parturient sed morbi scelerisque sociis quis faucibus primis suscipit scelerisque.
+@tbl-reg results olor convallis vulputate dictum mollis ante placerat dui parturient porttitor conubia vitae. Eros nec dignissim tortor nascetur laoreet mi nascetur interdum lacus donec? Non potenti elementum massa hendrerit odio taciti euismod sagittis rhoncus sodales montes mattis? Sociosqu luctus neque euismod elementum accumsan parturient sed morbi scelerisque sociis quis faucibus primis suscipit scelerisque.
 
 Sit aenean sociosqu curae magna natoque sociis pulvinar sagittis et congue. Sodales magna montes potenti tristique quis? Id suscipit lobortis suspendisse felis taciti massa vitae convallis in montes. Mauris sodales parturient mus tellus mollis dapibus felis vel? Dui malesuada nibh dui ut torquent taciti sodales tempor dapibus vitae montes?
 
@@ -171,19 +169,6 @@ Lorem suscipit pulvinar ultrices netus in porta diam ad habitant. Scelerisque id
 Consectetur blandit class scelerisque placerat et sapien. Aptent ornare orci commodo leo semper vitae facilisis augue vitae lectus auctor lacus. Bibendum netus porttitor platea taciti enim tincidunt enim vel lectus suspendisse scelerisque.
 
 Consectetur torquent justo cubilia luctus justo erat dignissim faucibus aliquet dictumst. Gravida metus morbi tristique pharetra at venenatis pretium dapibus porttitor commodo. Pulvinar tempus platea accumsan aliquam inceptos magna praesent pulvinar curae sollicitudin. Justo tincidunt imperdiet potenti quam malesuada fames dis et dignissim.
-
-```{r}
-#| label: fig-template
-#| fig-cap: Lorem lobortis lectus pellentesque sapien vivamus eros felis cum. Mattis risus euismod vivamus vel mi nostra euismod euismod praesent aliquam? @tbl-desc-gt Sagittis posuere bibendum turpis arcu maecenas gravida leo sollicitudin primis. Ullamcorper lacinia laoreet tincidunt mollis torquent semper. Sem nascetur eleifend gravida nostra magnis arcu gravida facilisis sollicitudin? Cum curae placerat et auctor faucibus arcu ad mauris sollicitudin nunc!
-
-# Code for the figure below. You should change the label from "fig-template" to something relevant but it should start with "fig-". You can then reference this figure in the tex with @fig-whatever-you-called-it
-
-# Each figure should go in a separate code chunk.
-# replace this code with a real figure
-ggplot(mtcars, aes(x=cyl, y=mpg))+
-  geom_point()+
-  theme_bw()
-```
 
 ```{r}
 #| label: tbl-reg
