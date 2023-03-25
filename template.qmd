@@ -3,12 +3,6 @@ title: "Demo of the AOG Article Template"
 shorttitle: "AOG Template"
 format:
   aog-article-pdf:
-    # adjust fonts as desired from available *system* fonts
-    mainfont: Baskerville
-    sansfont: Futura
-    papersize: letter
-    fig-height: 4     # smaller fig heights make floating easier
-    fig-width: 7.5    # set to the (full width - margins) of letter   
     keep-tex: false
 author:
   - name: John Doe
