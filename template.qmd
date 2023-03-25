@@ -190,4 +190,6 @@ texreg(list(model1, model2, model3),
 
 # Conclusions
 
-A paragraph to summarize the findings.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit duis tristique sollicitudin nibh. Integer vitae justo eget magna fermentum iaculis. Viverra ipsum nunc aliquet bibendum enim facilisis gravida. Pellentesque id nibh tortor id aliquet. Erat nam at lectus urna duis convallis convallis tellus. Risus quis varius quam quisque id diam. Morbi tristique senectus et netus et. Platea dictumst quisque sagittis purus sit. Et malesuada fames ac turpis egestas. Cursus in hac habitasse platea. Id venenatis a condimentum vitae. Turpis egestas maecenas pharetra convallis posuere. Fermentum et sollicitudin ac orci. Id aliquet lectus proin nibh nisl condimentum. Non pulvinar neque laoreet suspendisse interdum.
+
+Nisl rhoncus mattis rhoncus urna neque viverra. Eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque. Sed velit dignissim sodales ut eu. Egestas congue quisque egestas diam. Mi eget mauris pharetra et ultrices neque ornare aenean. Neque egestas congue quisque egestas diam in arcu. Amet consectetur adipiscing elit duis tristique sollicitudin. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. Commodo viverra maecenas accumsan lacus. Faucibus nisl tincidunt eget nullam non. Neque sodales ut etiam sit amet nisl purus in. Et tortor at risus viverra. Aliquam malesuada bibendum arcu vitae elementum. Lacus viverra vitae congue eu consequat ac felis.
