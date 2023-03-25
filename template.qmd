@@ -18,7 +18,6 @@ author:
   - name: John Doe
     orcid: 0000-0000-0000-0000
     email: john@somewhere.edu
-    url: https://aarongullickson.netlify.app/
     attributes:
       corresponding: true
     affiliations:
