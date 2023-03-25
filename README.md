@@ -48,15 +48,16 @@ This short title will appear in the upper left header of each page.
 Because the template only uses custom headers and tex partials, all of the customization available to the regular PDF format will work with this template. In particular, here are all of the standard settings used by the template which can be overridden by the YAML in the user's document:
 
 ```yaml
-papersize: letter
-# Replace fonts with any fonts available to the *system*
-mainfont: Baskerville 
-sansfont: Futura
-fontsize: 12pt   
-geometry: margin=1in
-fig-height: 4     # smaller fig heights make floating easier
-fig-width: 7.5    # set to the (full width - margins) of letter   
-fig-pos: "!t"
-colorlinks: true
-urlcolor: red
+pdf:
+  papersize: letter
+  # Replace fonts with any fonts available to the *system*
+  mainfont: Baskerville 
+  sansfont: Futura
+  fontsize: 12pt   
+  geometry: margin=1in
+  fig-height: 4     # smaller fig heights make floating easier
+  fig-width: 7.5    # set to the (full width - margins) of letter   
+  fig-pos: "!t"
+  colorlinks: true
+  urlcolor: red
 ```
