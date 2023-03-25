@@ -1,6 +1,6 @@
 # AOG Article Template
 
-This is my Quarto template to create a nice "published paper" quality PDF for scholarly work. The style is inspired by Steven V. Miller's R Markdown [article templates](https://github.com/svmiller/stevetemplates) which I used for many years and Andrew Heiss's [Hikmah] [templates](https://github.com/andrewheiss/hikmah-academic-quarto) and draws LaTeX code from both sources.  You can see a preview of the template at <https://aarongullickson.quarto.pub/demo-of-aog-article-template/>. 
+This is my Quarto template to create a nice "published paper" quality PDF for scholarly work. The style is inspired by Steven V. Miller's R Markdown [article templates](https://github.com/svmiller/stevetemplates) which I used for many years and Andrew Heiss's [Hikmah templates](https://github.com/andrewheiss/hikmah-academic-quarto) and draws LaTeX code from both sources.  You can see a preview of the template at <https://aarongullickson.quarto.pub/demo-of-aog-article-template/>. 
 
 ## Installation
 
