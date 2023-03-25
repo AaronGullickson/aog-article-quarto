@@ -1,24 +1,53 @@
-# Aog-pdf-quarto Format
+# AOG Article Template
 
-## Installing
+This is my Quarto template to create a nice "published paper" quality PDF for scholarly work. The style is inspired by Steven V. Miller's R Markdown [article templates](https://github.com/svmiller/stevetemplates) which I used for many years and Andrew Heiss's [Hikmah] [templates](https://github.com/andrewheiss/hikmah-academic-quarto) and draws LaTeX code from both sources.  You can see a preview of the template at <https://aarongullickson.quarto.pub/demo-of-aog-article-template/>. 
 
-*TODO*: Replace the `<github-organization>` with your GitHub organization.
+## Installation
+
+To install this template as an extension for an existing document, run the following command in your project working directory:
 
 ```bash
-quarto use template <github-organization>/aog-pdf-quarto
+quarto install extension AaronGullickson/aog-article-quarto
 ```
 
-This will install the extension and create an example qmd file that you can use as a starting place for your article.
+To your quarto document yaml, add:
 
-## Using
+```yaml
+format:
+  aog-article-pdf:
+    keep-tex: true
+```
 
-*TODO*: Describe how to use your format.
+Or, alternatively, from the command line:
 
-## Format Options
+```bash
+quarto render article.qmd --to aog-article-pdf
+```
 
-*TODO*: If your format has options that can be set via document metadata, describe them.
+## Using the Template
 
-## Example
+If you want to start a new article from the template or just check out the existing test document, run the following command:
 
-Here is the source code for a minimal sample document: [example.qmd](example.qmd).
+```bash
+quarto use template AaronGullickson/aog-article-quarto
+```
 
+You can render the `template.qmd` provided to try it out.
+
+## Customization
+
+Because the template only uses custom headers and tex partials, all of the customization available to the regular PDF format will work with this template. In particular, here are all of the standard settings used by the template which can be overridden by the YAML in the user's document:
+
+```yaml
+papersize: letter
+# Replace fonts with any fonts available to the *system*
+mainfont: Baskerville 
+sansfont: Futura
+fontsize: 12pt   
+geometry: margin=1in
+fig-height: 4     # smaller fig heights make floating easier
+fig-width: 7.5    # set to the (full width - margins) of letter   
+fig-pos: "!t"
+colorlinks: true
+urlcolor: red
+```
