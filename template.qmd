@@ -3,17 +3,13 @@ title: "Demo of the AOG Article Template"
 shorttitle: "AOG Template"
 format:
   aog-article-pdf:
-    # adjust fonts as desired from *system* fonts
+    # adjust fonts as desired from available *system* fonts
     mainfont: Baskerville
     sansfont: Futura
-    fontsize: 12pt          # font size (typically 10pt, 11pt, or 12pt)
-    geometry: margin=1in    # controls the margin size
     papersize: letter
-    colorlinks: true
-    urlcolor: red
-    fig-height: 3.5
-    fig-pos: "!t"
-    keep-tex: true
+    fig-height: 4     # smaller fig heights make floating easier
+    fig-width: 7.5    # set to the (full width - margins) of letter   
+    keep-tex: false
 author:
   - name: John Doe
     orcid: 0000-0000-0000-0000
@@ -31,8 +27,9 @@ abstract: |
   Ipsum nostra facilisis sapien nullam. Facilisi himenaeos pharetra ultricies scelerisque non fusce quisque aliquam netus tellus. Dictum tellus et sociis quisque ornare ad a natoque magna blandit. Tortor duis aptent cursus lacus inceptos tristique magnis dictumst. Taciti varius nascetur aliquet hac ornare vitae ultricies. Rhoncus primis purus morbi aliquet quam cubilia nullam malesuada ridiculus.
 keywords: [template, demo]
 thanks: Love to everyone.
-#reference-section-title: Bibliography
+reference-section-title: Bibliography  # adjust name of reference section
 bibliography: bibliography.bib
+# You an also use a local CSL file
 csl: https://www.zotero.org/styles/american-journal-of-sociology
 ---
 
@@ -200,5 +197,3 @@ texreg(list(model1, model2, model3),
 # Conclusions
 
 A paragraph to summarize the findings.
-
-# References

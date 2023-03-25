@@ -11,8 +11,13 @@ contributes:
           message: false
           warning: false
     pdf:
-      toc: false
       documentclass: article
+      toc: false
+      fontsize: 12pt   
+      geometry: margin=1in
+      fig-pos: "!t"
+      colorlinks: true
+      urlcolor: red
       block-headings: false # to deal with titlesec problems
       include-in-header: header.tex
       template-partials:
