@@ -36,6 +36,15 @@ You can render the `template.qmd` provided to try it out.
 
 ## Customization
 
+The template uses only one custom argument, `shorttitle`, which can be specified in the yaml header, like:
+
+```yaml
+title: The Full Really Long Title
+shorttitle: A Short Title
+```
+
+This short title will appear in the upper left header of each page.
+
 Because the template only uses custom headers and tex partials, all of the customization available to the regular PDF format will work with this template. In particular, here are all of the standard settings used by the template which can be overridden by the YAML in the user's document:
 
 ```yaml
