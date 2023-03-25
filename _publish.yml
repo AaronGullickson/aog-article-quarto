@@ -1,0 +1,4 @@
+- source: template.qmd
+  quarto-pub:
+    - id: 570eeefe-24eb-4518-b904-bbaee6e852af
+      url: 'https://aarongullickson.quarto.pub/demo-of-aog-article-template'
