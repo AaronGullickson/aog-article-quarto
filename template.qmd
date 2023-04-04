@@ -17,6 +17,7 @@ author:
   - name: Jane Doe
     affiliations:
       - ref: uni
+shortauthors: Doe & Doe
 abstract: |
   Ipsum nostra facilisis sapien nullam. Facilisi himenaeos pharetra ultricies scelerisque non fusce quisque aliquam netus tellus. Dictum tellus et sociis quisque ornare ad a natoque magna blandit. Tortor duis aptent cursus lacus inceptos tristique magnis dictumst. Taciti varius nascetur aliquet hac ornare vitae ultricies. Rhoncus primis purus morbi aliquet quam cubilia nullam malesuada ridiculus.
 keywords: [template, demo]

@@ -5,7 +5,10 @@ $-- Implements the frontmatter, title page, and abstract.
 
 % add the short title to the fancy header
 $if(shorttitle)$
-\fancyhead[L]{$shorttitle$}
+\fancyhead[R]{$shorttitle$}
+$endif$
+$if(shortauthors)$
+\fancyhead[L]{$shortauthors$}
 $endif$
 
 % need to redefine the CSLRefrences environment to get enough spacing of 
