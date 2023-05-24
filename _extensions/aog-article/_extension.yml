@@ -15,8 +15,8 @@ contributes:
       toc: false
       papersize: letter
       # Replace fonts with any fonts available to the *system*
-      mainfont: Baskerville 
-      sansfont: Futura
+      mainfont: Times New Roman 
+      sansfont: Arial
       fontsize: 12pt   
       geometry: margin=1in
       fig-height: 4     # smaller fig heights make floating easier
