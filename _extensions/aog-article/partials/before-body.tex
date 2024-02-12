@@ -11,24 +11,6 @@ $if(shortauthors)$
 \fancyhead[L]{$shortauthors$}
 $endif$
 
-% need to redefine the CSLRefrences environment to get enough spacing of 
-% bibliography after title
-$if(csl-refs)$
-\renewenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
- {% don't indent paragraphs
-  \vspace{10pt}
-  \setlength{\parindent}{0pt}
-  % turn on hanging indent if param 1 is 1
-  \ifodd #1
-  \let\oldpar\par
-  \def\par{\hangindent=\cslhangindent\oldpar}
-  \fi
-  % set entry spacing
-  \setlength{\parskip}{#2\cslentryspacingunit}
- }%
- {}
-$endif$
-
 $if(has-frontmatter)$
 \frontmatter
 $endif$
