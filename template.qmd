@@ -1,9 +1,9 @@
 ---
+## Paper meta-information ##
 title: "Demo of the AOG Article Template"
+# shorttitle and shortauthors information will show in the header (not required)
 shorttitle: "AOG Template"
-format:
-  aog-article-pdf:
-    keep-tex: false
+shortauthors: Doe & Doe
 author:
   - name: John Doe
     orcid: 0000-0000-0000-0000
@@ -17,15 +17,24 @@ author:
   - name: Jane Doe
     affiliations:
       - ref: uni
-shortauthors: Doe & Doe
 abstract: |
   Ipsum nostra facilisis sapien nullam. Facilisi himenaeos pharetra ultricies scelerisque non fusce quisque aliquam netus tellus. Dictum tellus et sociis quisque ornare ad a natoque magna blandit. Tortor duis aptent cursus lacus inceptos tristique magnis dictumst. Taciti varius nascetur aliquet hac ornare vitae ultricies. Rhoncus primis purus morbi aliquet quam cubilia nullam malesuada ridiculus.
 keywords: [template, demo]
 thanks: Love to everyone.
+
+## Bibliography meta-information ##
 reference-section-title: Bibliography  # adjust name of reference section
 bibliography: bibliography.bib
 # You an also use a local CSL file
 csl: https://www.zotero.org/styles/american-journal-of-sociology
+
+## Formats ##
+format:
+  aog-article-pdf:
+    keep-tex: false
+    # Set alternative fonts here
+    #mainfont: Baskerville
+    #sansfont: Futura-Medium
 ---
 
 ```{r}
@@ -82,7 +91,6 @@ Amet ridiculus magna ut pulvinar viverra himenaeos dignissim malesuada elementum
 Amet rutrum a venenatis mi lectus venenatis nullam purus libero. Pulvinar dapibus nisl dapibus ornare dignissim nibh congue elementum pharetra natoque cum ac laoreet tortor facilisi penatibus sollicitudin.
 
 ## Subsection 2
-
 
 Adipiscing ad rhoncus nunc molestie sed feugiat? Imperdiet vivamus montes himenaeos sagittis urna nec felis vehicula nec pretium tortor? Molestie natoque sociis aenean mollis donec ornare cursus parturient tortor erat. Volutpat mi natoque sodales et hac ultricies eu pulvinar primis semper. Vitae est curabitur blandit montes tortor eros senectus porttitor maecenas.
 
