@@ -14,8 +14,7 @@ To your quarto document yaml, add:
 
 ```yaml
 format:
-  aog-article-pdf:
-    keep-tex: true
+  aog-article-pdf: default
 ```
 
 Or, alternatively, from the command line:
