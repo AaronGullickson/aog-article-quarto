@@ -33,9 +33,43 @@ format:
   aog-article-pdf:
     keep-tex: false
     # Set alternative fonts here
-    #mainfont: Baskerville
-    #sansfont: Futura-Medium
+    # mainfont: Baskerville
+    # sansfont: Futura-Medium
 ---
+
+```{r}
+#| label: setup
+#| include: false
+if(!require(tidyverse)) {
+  install.packages("tidyverse")
+  library(tidyverse)
+}
+if(!require(modelsummary)) {
+  install.packages("modelsummary")
+  library(modelsummary)
+}
+if(!require(gt)) {
+  install.packages("gt")
+  library(gt)
+}
+if(!require(palmerpenguins)) {
+  install.packages("palmerpenguines")
+  library(palmerpenguins)
+}
+```
+
+```{r}
+style_gt_table <- function(gt_table) {
+  gt_table |>
+    tab_options(
+      table.font.size = 12,
+      data_row.padding = px(2),
+      heading.align = "left",
+      table.align = "center"
+    ) |>
+    opt_table_font(font = "Times New Roman")
+}
+```
 
 # Introduction
 
@@ -67,6 +101,7 @@ Amet rutrum a venenatis mi lectus venenatis nullam purus libero. Pulvinar dapibu
 
 ## Subsection 2
 
+
 Adipiscing ad rhoncus nunc molestie sed feugiat? Imperdiet vivamus montes himenaeos sagittis urna nec felis vehicula nec pretium tortor? Molestie natoque sociis aenean mollis donec ornare cursus parturient tortor erat. Volutpat mi natoque sodales et hac ultricies eu pulvinar primis semper. Vitae est curabitur blandit montes tortor eros senectus porttitor maecenas.
 
 ### Subsubsection
@@ -80,19 +115,22 @@ Ipsum fringilla natoque sem praesent auctor tellus viverra convallis nullam quis
 * Point B
 * Point C
 
+
 # Data and Methods
 
-Adipiscing pretium duis penatibus habitasse nisi metus parturient convallis mattis. Porta pharetra rhoncus dis massa nulla ornare egestas! Ante leo cursus mauris eleifend potenti donec tempus. Fusce ultricies aptent accumsan himenaeos netus augue felis nibh. Duis commodo himenaeos aliquam integer! See @tbl-state.
+Adipiscing pretium duis penatibus habitasse nisi metus parturient convallis mattis. Porta pharetra rhoncus dis massa nulla ornare egestas! Ante leo cursus mauris eleifend potenti donec tempus. Fusce ultricies aptent accumsan himenaeos netus augue felis nibh. Duis commodo himenaeos aliquam integer! See @tbl-penguin-data.
 
 ```{r}
-#| label: tbl-state
-#| tbl-cap: Some State Information
+#| label: tbl-penguin-data
+#| tbl-cap: Some Palmer Penguin Data
 
-head(state.x77) |> 
-  knitr::kable()
+palmerpenguins::penguins[c(1,200,205,307),] |> 
+  select(species, island, body_mass_g, bill_length_mm, sex) |>
+  gt() |>
+  style_gt_table()
 ```
 
-Lorem lobortis lectus pellentesque sapien vivamus eros felis cum. Mattis risus euismod vivamus vel mi nostra euismod euismod praesent aliquam? @tbl-state Sagittis posuere bibendum turpis arcu maecenas gravida leo sollicitudin primis. Ullamcorper lacinia laoreet tincidunt mollis torquent semper. Sem nascetur eleifend gravida nostra magnis arcu gravida facilisis sollicitudin? Cum curae placerat et auctor faucibus arcu ad mauris sollicitudin nunc! Posuere iaculis arcu dapibus dis ullamcorper pellentesque penatibus ultrices sed aenean ligula ullamcorper donec aliquam.
+Lorem lobortis lectus pellentesque sapien vivamus eros felis cum. Mattis risus euismod vivamus vel mi nostra euismod euismod praesent aliquam? @tbl-penguin-data Sagittis posuere bibendum turpis arcu maecenas gravida leo sollicitudin primis. Ullamcorper lacinia laoreet tincidunt mollis torquent semper. Sem nascetur eleifend gravida nostra magnis arcu gravida facilisis sollicitudin? Cum curae placerat et auctor faucibus arcu ad mauris sollicitudin nunc! Posuere iaculis arcu dapibus dis ullamcorper pellentesque penatibus ultrices sed aenean ligula ullamcorper donec aliquam.
 
 $$y_i=\beta_0+\beta_1x_i+\epsilon_i$$ {#eq-model}
 
@@ -112,7 +150,13 @@ Lorem accumsan pharetra est cubilia placerat cubilia est fusce natoque laoreet r
 #| label: fig-template
 #| fig-cap: Lorem lobortis lectus pellentesque sapien vivamus eros felis cum. Mattis risus euismod vivamus vel mi nostra euismod euismod praesent aliquam? Sagittis posuere bibendum turpis arcu maecenas gravida leo sollicitudin primis. Ullamcorper lacinia laoreet tincidunt mollis torquent semper. Sem nascetur eleifend gravida nostra magnis arcu gravida facilisis sollicitudin? Cum curae placerat et auctor faucibus arcu ad mauris sollicitudin nunc!
 
-plot(mtcars$cyl, mtcars$mpg)
+# Code for the figure below. You should change the label from "fig-template" to something relevant but it should start with "fig-". You can then reference this figure in the tex with @fig-whatever-you-called-it
+
+# Each figure should go in a separate code chunk.
+# replace this code with a real figure
+ggplot(mtcars, aes(x=cyl, y=mpg))+
+  geom_point()+
+  theme_bw()
 ```
 
 @fig-template Consectetur consequat aptent habitasse dignissim magna feugiat consequat nisl praesent nunc cras tellus? Suscipit curae quis lacus hac rutrum primis sem sem magnis pharetra leo odio parturient libero odio. Mattis praesent maecenas penatibus dapibus hendrerit venenatis libero tellus nascetur. Dis maecenas cursus aptent purus.
@@ -127,11 +171,13 @@ Lorem nullam nunc habitasse blandit eleifend est mauris. Lacus class mauris inte
 
 Elit varius diam quam magnis suscipit leo aptent congue? Proin placerat ultrices interdum mollis platea integer ac pharetra vulputate lacinia. Viverra nostra bibendum lacus lobortis varius condimentum eleifend faucibus odio justo montes sagittis? Eget imperdiet class tellus tincidunt dictumst sem ridiculus quam? Eget rutrum fames ridiculus eget pretium neque libero per! Eget dignissim magna nunc nulla dis orci interdum tellus tortor risus ut.
 
-Olor convallis vulputate dictum mollis ante placerat dui parturient porttitor conubia vitae. Eros nec dignissim tortor nascetur laoreet mi nascetur interdum lacus donec? Non potenti elementum massa hendrerit odio taciti euismod sagittis rhoncus sodales montes mattis? Sociosqu luctus neque euismod elementum accumsan parturient sed morbi scelerisque sociis quis faucibus primis suscipit scelerisque.
+@tbl-reg results olor convallis vulputate dictum mollis ante placerat dui parturient porttitor conubia vitae. Eros nec dignissim tortor nascetur laoreet mi nascetur interdum lacus donec? Non potenti elementum massa hendrerit odio taciti euismod sagittis rhoncus sodales montes mattis? Sociosqu luctus neque euismod elementum accumsan parturient sed morbi scelerisque sociis quis faucibus primis suscipit scelerisque.
 
 Sit aenean sociosqu curae magna natoque sociis pulvinar sagittis et congue. Sodales magna montes potenti tristique quis? Id suscipit lobortis suspendisse felis taciti massa vitae convallis in montes. Mauris sodales parturient mus tellus mollis dapibus felis vel? Dui malesuada nibh dui ut torquent taciti sodales tempor dapibus vitae montes?
 
 Amet habitasse semper egestas ultricies libero fames orci primis mus sapien fringilla. Pretium tellus convallis bibendum aliquet rutrum potenti! Fringilla et et enim! Lorem molestie lacinia elementum nostra sem et dui condimentum nisl porttitor suspendisse. Felis enim semper nec semper odio.
+
+# Conclusions
 
 Sit praesent nascetur torquent risus interdum erat massa consequat rhoncus. Dignissim arcu augue fermentum odio mattis dictumst turpis nostra vel. Vestibulum velit velit ut dapibus tempus platea nisl ornare justo nascetur proin eleifend nunc. Iaculis interdum quisque platea posuere vitae.
 
@@ -140,6 +186,22 @@ Lorem suscipit pulvinar ultrices netus in porta diam ad habitant. Scelerisque id
 Consectetur blandit class scelerisque placerat et sapien. Aptent ornare orci commodo leo semper vitae facilisis augue vitae lectus auctor lacus. Bibendum netus porttitor platea taciti enim tincidunt enim vel lectus suspendisse scelerisque.
 
 Consectetur torquent justo cubilia luctus justo erat dignissim faucibus aliquet dictumst. Gravida metus morbi tristique pharetra at venenatis pretium dapibus porttitor commodo. Pulvinar tempus platea accumsan aliquam inceptos magna praesent pulvinar curae sollicitudin. Justo tincidunt imperdiet potenti quam malesuada fames dis et dignissim.
+
+```{r}
+#| label: tbl-reg
+#| tbl-cap: A Caption
+
+# build your models here - change these
+model1 <- lm(mpg~cyl+disp, data=mtcars)
+model2 <- lm(mpg~cyl+disp+hp, data=mtcars)
+model3 <- lm(mpg~cyl+disp+hp+wt, data=mtcars)
+
+#to print to screen replace texreg with screenreg
+modelsummary(list(model1, model2, model3),
+             output = "gt",
+             format = 3) |>
+  style_gt_table()
+```
 
 # Conclusions
 
