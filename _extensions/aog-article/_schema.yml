@@ -1,0 +1,24 @@
+$schema: https://m.canouil.dev/quarto-wizard/assets/schema/v1/extension-schema.json
+
+formats:
+  aog-article-pdf:
+    fontsize:
+      type: string
+      description: Base font size such as 10pt, 11pt, or 12pt.
+    geometry:
+      type: string
+      description: Geometry options for PDF page layout.
+    fig-width:
+      type: number
+      description: Default figure width in inches.
+    fig-pos:
+      type: string
+      description: Preferred LaTeX float placement token.
+    colorlinks:
+      type: boolean
+      description: Enable coloured links in PDF output.
+    urlcolor:
+      type: string
+      description: URL link colour in PDF output.
+      completion:
+        type: color

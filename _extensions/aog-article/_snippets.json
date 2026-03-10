@@ -1,0 +1,22 @@
+{
+  "AOG format setup": {
+    "prefix": "format",
+    "body": [
+      "format:",
+      "  aog-article-pdf: default"
+    ],
+    "description": "Enable AOG article PDF format."
+  },
+  "AOG PDF options": {
+    "prefix": "options",
+    "body": [
+      "format:",
+      "  aog-article-pdf:",
+      "    fontsize: ${1:12pt}",
+      "    geometry: ${2:margin=1in}",
+      "    fig-width: ${3:6.5}",
+      "    fig-pos: \"${4:!t}\""
+    ],
+    "description": "Insert common AOG format option overrides."
+  }
+}
